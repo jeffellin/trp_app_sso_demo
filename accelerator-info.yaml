@@ -1,0 +1,19 @@
+id: 47ea9fa8-9445-4dc6-ad2f-4db64c81668a
+timestamp: 2023-09-25T22:18:24Z
+username: guest
+source: TAP-GUI
+accelerator:
+  name: appsso-starter-java
+  source:
+    image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:d5e2b38cbd6ec1127e6df866a9356ed8adcad0e71293e7abb06840dbb02eeaf9
+fragments:
+  - name: build-wrapper-gradle
+    source:
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:5480259d6a29a11f0cc482cd304501d74ccd89dd7207f2d639d6f0d8eedc3bf8
+  - name: tap-workload
+    source:
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:d9c7d8d322f0740666ba7c752a9174d1eb66274338c4f0e211edb1d448104c2a
+options:
+  appssoOfferingName: ghf
+  includeBuildToolWrapper: true
+  projectName: appsso-starter-java
